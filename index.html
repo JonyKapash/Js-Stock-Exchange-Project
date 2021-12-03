@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Stock Exchange</title>
+		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="marqueeContainer" class="marquee"></div>
+		<div class="container">
+			<h2 id="main-header">Search Nasdaq Stocks</h2>
+			<div id="form"></div>
+			<div id="results"></div>
+		</div>
+
+		<!-- scripts -->
+		<script src="./Js/Marquee.js"></script>
+		<script src="./Js/SearchForm.js"></script>
+		<script src="./Js/SearchResults.js"></script>
+
+		<script>
+			(async function () {
+				// marquee
+				const marquee = new Marquee(
+					document.getElementById("marqueeContainer")
+				);
+				marquee.displayMarquee();
+				// form
+				const form = new SearchForm(document.getElementById("form"));
+				// results
+				const results = new SearchResults(document.getElementById("results"));
+				form.onSearch(companies => {
+					results.renderResults(companies);
+				});
+			})();
+		</script>
+	</body>
+</html>

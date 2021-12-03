@@ -1,0 +1,63 @@
+#companyLoading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.container {
+	max-width: 1200px;
+	display: none;
+}
+
+.stockInformation {
+	display: flex;
+	align-items: center;
+	margin: 22px 0 22px 0;
+}
+
+#stockImg {
+	width: 50px;
+	margin-inline-end: 10px;
+}
+
+#stockPrice {
+	font-size: 1.8rem;
+	margin: 1px 10px 1px 5px
+}
+
+.stockPriceContainer {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.cardContainer {
+	display: flex;
+	width: 80%;
+}
+
+.card-body {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.card {
+	border: none;
+	border-radius: 6px;
+	/* box-shadow: 0 6px 15px 0 rgb(0 0 0 / 20%); */
+	box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
+	margin-bottom: 30px;
+}
+
+.myChart-container {
+	width: 1176.47px;
+	box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
+}
+
+#myChart {
+	max-height: 555px;
+	margin-top: 30px;
+	width: 1192.47px;
+	margin-bottom: 30px;
+}

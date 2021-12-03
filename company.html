@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<link rel="stylesheet" href="./css/company.css" />
+		<title>Company</title>
+		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="companyLoading" class="spinner-grow text-secondary"></div>
+		<div id="pageContainer" class="container">
+			<div class="stockInformation">
+				<img
+					id="stockImg"
+					src=""
+					onerror="this.src='./images/Stocks-icon.png'"
+					alt="company-logo"
+				/>
+				<h2 id="stockName"></h2>
+			</div>
+
+			<div class="stockPriceContainer">
+				<div id="stockPrice"></div>
+				<div id="changesPercentage"></div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div id="marketCap"></div>
+					<div id="industry"></div>
+					<a target="blank" id="website" href=""></a>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div id="stockDescription"></div>
+				</div>
+			</div>
+
+			<div class="myChart-container">
+				<canvas id="myChart"></canvas>
+			</div>
+		</div>
+
+		<script src="./Js/company.js"></script>
+	</body>
+</html>
